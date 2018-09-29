@@ -47,7 +47,6 @@ void Timer1A_Init100HzInt(void);
 void Graph_PMF(void);
 int getTimeJitter(void);
 void DelayWait10ms(uint32_t n);
-void Pause(void);
 void testAverager(void);
 
 int counter = 0;
@@ -290,12 +289,4 @@ void DelayWait10ms(uint32_t n){uint32_t volatile time;
   }
 }
 
-// click PF4 button to continue
-void Pause(void){
-  while(PF4==0x00){ 
-    DelayWait10ms(10);
-  }
-  while(PF4==0x10){
-    DelayWait10ms(10);
-  }
-}
+
